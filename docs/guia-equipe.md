@@ -1,10 +1,10 @@
 # Guia da Equipe — Projeto Gilded Rose
 
-## 📋 O Projeto
+## O Projeto
 
 **Gilded Rose** — sistema legado de estoque de uma pousada que precisa ser refatorado aplicando **SOLID**, **Clean Architecture**, **testes pytest**, e adicionando suporte a **itens Conjurados**.
 
-## 👥 Time e Tarefas
+## Time e Tarefas
 
 | Membro | Função | Entregáveis | Peso |
 |--------|--------|-------------|------|
@@ -13,7 +13,7 @@
 | **RYAN LUIGI** | Documentação | Diagnóstico técnico + Documento de requisitos + README | 3,0 |
 | **IGOR LIMA** | Implementação / Apresentação | Implementação Conjured + Apresentação final | 3,5 |
 
-## 🔄 Git Flow — Branches e Commits
+## Git Flow — Branches e Commits
 
 ### Padrão do Professor (usar igual)
 
@@ -101,7 +101,7 @@
 
 **Merge:** `main` ← `docs/final`
 
-## 📁 Estrutura Final do Projeto
+## Estrutura Final do Projeto
 
 ```
 gilded-rose/
@@ -135,7 +135,7 @@ gilded-rose/
 │   ├── __init__.py
 │   └── test_gilded_rose.py
 ├── docs/
-│   ├── GUIA-EQUIPE.md
+│   ├── guia-equipe.md
 │   ├── equipe.md
 │   ├── commits.md
 │   ├── trabalho.md
@@ -147,7 +147,7 @@ gilded-rose/
     └── slides.pdf
 ```
 
-## 🚫 Regras de Ouro
+## Regras de Ouro
 
 | Regra | Penalidade |
 |-------|-----------|
@@ -159,7 +159,7 @@ gilded-rose/
 | Código não executar | Nota máxima **5,0** |
 | Conjured incorreto | **-2,0** |
 
-## 🧪 Comandos Úteis
+## Comandos Úteis
 
 ```bash
 git checkout -b <nome-da-branch>   # criar branch nova
@@ -171,7 +171,7 @@ pytest -v                          # rodar testes
 pytest --cov=src tests/            # cobertura
 ```
 
-## 🚀 Para Começar
+## Para Começar
 
 ```bash
 git clone <url-do-repositorio> gilded-rose
