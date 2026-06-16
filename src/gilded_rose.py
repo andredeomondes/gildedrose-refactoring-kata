@@ -1,5 +1,8 @@
+from src.item import Item
+from typing import List
+
 class GildedRose:
-    def __init__(self, items):
+    def __init__(self, items: List[Item]):
         self.items = items
 
     def update_quality(self):

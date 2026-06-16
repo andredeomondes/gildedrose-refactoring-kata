@@ -1,6 +1,8 @@
 __pycache__/
 *.pyc
+.venv/
 venv/
+monkeytype.sqlite3
 .env
 .vscode/
 .idea/
