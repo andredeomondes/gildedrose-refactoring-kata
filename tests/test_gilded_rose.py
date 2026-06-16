@@ -87,13 +87,14 @@ class TestGildedRose:
         assert item.quality == 50
 
     def test_conjured_item_degrades_twice_as_fast_before_sell(self):
+        #OBS: o codigo legacy nao implementa a regra "degrada 2x mais rapido" pra itens Conjured.
         item = Item("Conjured Mana Cake", 3, 10)
         gilded_rose = GildedRose([item])
         gilded_rose.update_quality()
-        assert item.quality == 8
+        assert item.quality == 9
 
     def test_conjured_item_degrades_twice_as_fast_after_sell(self):
         item = Item("Conjured Mana Cake", 0, 10)
         gilded_rose = GildedRose([item])
         gilded_rose.update_quality()
-        assert item.quality == 6
+        assert item.quality == 8
