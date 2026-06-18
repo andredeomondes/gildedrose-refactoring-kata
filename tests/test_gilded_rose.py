@@ -97,3 +97,35 @@ class TestGildedRose:
         gilded_rose = GildedRose([item])
         gilded_rose.update_quality()
         assert item.quality == 6
+
+    def test_conjured_item_quality_never_negative_before_sell(self):
+        item = Item("Conjured Mana Cake", 5, 1)
+        gilded_rose = GildedRose([item])
+        gilded_rose.update_quality()
+        assert item.quality == 0
+
+    def test_conjured_item_quality_never_negative_after_sell(self):
+        item = Item("Conjured Mana Cake", 0, 3)
+        gilded_rose = GildedRose([item])
+        gilded_rose.update_quality()
+        assert item.quality == 0
+
+    def test_conjured_item_quality_zero_stays_zero(self):
+        item = Item("Conjured Mana Cake", 5, 0)
+        gilded_rose = GildedRose([item])
+        gilded_rose.update_quality()
+        assert item.quality == 0
+
+    def test_conjured_item_sell_in_decreases(self):
+        item = Item("Conjured Mana Cake", 3, 10)
+        gilded_rose = GildedRose([item])
+        gilded_rose.update_quality()
+        assert item.sell_in == 2
+
+    def test_conjured_item_quality_max_50(self):
+        item = Item("Conjured Mana Cake", 5, 50)
+        gilded_rose = GildedRose([item])
+        gilded_rose.update_quality()
+        assert item.quality == 48
+        assert item.quality <= 50
+
